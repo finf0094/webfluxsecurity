@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgres://195.49.210.212:5433/webflux-database
+    username: postgres
+    password: 12341234
+  flyway:
+    url: jdbc:postgresql://195.49.210.212:5433/webflux-database
+    locations: classpath:db/migration
+    password: 12341234
+    user: postgres
+
+jwt:
+  password:
+    encoder:
+      secret: FZK2DZ82odqS13e8aENggaMbb_fakl-nJL4AEVBX43g
+      iteration: 64
+      keyLength: 256
+  secret: b5f59337a612a2a7dc07328f3e7d1a04722967c7f06df20a499a7d3f91ff2a7e
+  expiration: 3600
+  issuer: webflux
